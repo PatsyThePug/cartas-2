@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordenando Cartas con Selección</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Ordenando Cartas con Selección</h1>
+
+    <div class="controls">
+      <div class="input-group">
+        <label for="cardCount">Número de cartas:</label>
+        <input type="number" id="cardCount" min="2" max="20" value="6" />
+      </div>
+      <button id="drawBtn" class="btn btn-primary">Sorteo</button>
+      <button id="sortBtn" class="btn btn-secondary" disabled>Sort</button>
+      <button id="helpBtn" class="btn btn-info" title="Cómo funciona el algoritmo">?</button>
+    </div>
+
+    <div class="card-area">
+      <div id="cardContainer" class="card-container"></div>
+    </div>
+
+    <div class="log-section">
+      <h3>Selection Log:</h3>
+      <div id="sortingLog" class="sorting-log"></div>
+    </div>
+  </div>
+
+  <!-- Algorithm Explanation Modal -->
+  <div id="algorithmModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Algoritmo de Ordenamiento por Selección</h2>
+      <div class="algorithm-explanation">
+        <p><strong>Cómo funciona el Ordenamiento por Selección:</strong></p>
+        <ol>
+          <li><strong>Buscar el mínimo:</strong> Comienza desde la primera posición y encuentra la carta más pequeña en todo el arreglo.</li>
+          <li><strong>Intercambiar:</strong> Coloca la carta más pequeña en la primera posición intercambiándola con la carta que está allí actualmente.</li>
+          <li><strong>Repetir:</strong> Avanza a la siguiente posición y encuentra la carta más pequeña en la porción restante no ordenada.</li>
+          <li><strong>Continuar:</strong> Sigue haciendo esto hasta que todas las cartas estén en sus posiciones correctas.</li>
+        </ol>
+        <p><strong>Indicadores Visuales:</strong></p>
+        <ul>
+          <li><span class="indicator selected"></span> <strong>Verde:</strong> Posición actual siendo llenada</li>
+          <li><span class="indicator comparing"></span> <strong>Amarillo:</strong> Cartas siendo comparadas</li>
+          <li><span class="indicator sorted"></span> <strong>Azul:</strong> Cartas ya ordenadas</li>
+        </ul>
+        <p><strong>Complejidad de Tiempo:</strong> O(n²) - Siempre hace n(n-1)/2 comparaciones</p>
+        <p><strong>Complejidad de Espacio:</strong> O(1) - Solo usa una cantidad constante de espacio extra</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
