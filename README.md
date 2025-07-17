@@ -38,9 +38,11 @@ Simular de forma visual y comprensible el proceso de ordenamiento paso a paso ut
 - `style.css`: Define estilos visuales de las cartas, animaciones y layout.
 - `script.js`: Lógica de generación, ordenamiento y renderización.
 
-## 👀 Vista previa
+🌟 ¡Mira cómo funciona sin salir de tu compu!
 
-Puedes verlo en ejecución desde Codespace usando:
+✨ [Abrir en Codespace](https://github.dev/PatsyThePug/cartas-2)
+🧪 También puedes correrlo con `npx http-server --yes -c-1`
+
 
 ```bash
 npx http-server --yes -c-1
